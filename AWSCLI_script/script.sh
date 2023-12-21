@@ -7,10 +7,10 @@
 IMAGE_PATH="gbssg_logo.png"
 IMAGE_NAME="gbssg_logo"
 REDUCTION_RATE="2"
-BUCKET_NAME_SRC="bildverkleinerungsource1234"
-BUCKET_NAME_DST="bildverkleinerungdestination1234"
+BUCKET_NAME_SRC="bildverkleinerungsource"
+BUCKET_NAME_DST="bildverkleinerungdestination"
 REGION="us-east-1"
-LAMBDA_FUNCTION_NAME="LamdaBildkomprimierung1234"
+LAMBDA_FUNCTION_NAME="LamdaBildkomprimierung"
 
 # ------------------------------- Buckets erstellen -------------------------------
 if aws s3api head-bucket --bucket "$BUCKET_NAME_SRC" 2>/dev/null; then
@@ -29,16 +29,16 @@ fi
 
 if aws s3api head-bucket --bucket "$BUCKET_NAME_DST" 2>/dev/null; then
     echo "Bucket $bucket_name existiert bereits und wird zuerst gelöscht."
-    echo "Neuer, erster Bucket wird erstellt"
+    echo "Neuer, zweiter Bucket wird erstellt"
     aws s3 rm s3://$BUCKET_NAME_DST --recursive
     aws s3api delete-bucket --bucket $BUCKET_NAME_DST --region $REGION
     aws s3api wait bucket-not-exists --bucket $BUCKET_NAME_DST --region $REGION
     aws s3api create-bucket --bucket $BUCKET_NAME_DST --region $REGION
-    echo "Neuer, erster Bucket $BUCKET_NAME_DST erstellt"
+    echo "Neuer, zweiter Bucket $BUCKET_NAME_DST erstellt"
 else
-    echo "Erster Bucket wird erstellt"
+    echo "Zweiter Bucket wird erstellt"
     aws s3api create-bucket --bucket $BUCKET_NAME_DST --region $REGION
-    echo "Erster Bucket $BUCKET_NAME_DST erstellt"
+    echo "Zweiter Bucket $BUCKET_NAME_DST erstellt"
 fi
 
 # ------------------------------- Lambdafunktion erstellen und ausführen / Trigger -------------------------------
@@ -80,7 +80,7 @@ aws lambda add-permission \
 echo "Trigger erstellt"
 
 # ------------------------------- Bild in den Source Bucket hochladen -------------------------------
-echo "Bild wird hochgeladen"
+echo "Bild wird in $BUCKET_NAME_SRC hochgeladen"
 # Bild in den Source Bucket hochladen
 aws s3 cp $IMAGE_PATH s3://$BUCKET_NAME_SRC/ --region $REGION --metadata metadata="$REDUCTION_RATE;$BUCKET_NAME_DST"
-echo "Bild hochgeladen"
+echo "Bild in $BUCKET_NAME_SRC hochgeladen"
