@@ -45,3 +45,8 @@ In diesem Abschnitt wird die Lambda-Funktion erstellt und ein Trigger hinzugefü
 Abschließend wird das Bild in den Source-Bucket hochgeladen. Dabei wird der Benutzer aufgefordert, die Verkleinerungsrate einzugeben, die als Metadaten zusammen mit dem Ziel-Bucket in das Objekt eingefügt wird.
 
 Das Skript ist nun vollständig dokumentiert und ermöglicht es Benutzern, AWS Cloud-Bildverkleinerungsfunktionen mithilfe dieses Bash-Skripts zu nutzen.
+
+## 7. Mögliche Problemen
+
+Weil das ein Bashskript ist muss es Unix endlines haben das wäre LF und Windows hat CRLF das heisst wenn man die File auf windows von Github herunterholt wird es ein Fehler geben.
+Benutzen sie bitte die File die wir Ihnen in der .zip Datei mitgeschickt haben damit sie diese probleme nicht haben sonst könnte man mit dem Tool dos2unix die file kurz konvertieren.
