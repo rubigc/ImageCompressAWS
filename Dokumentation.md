@@ -50,3 +50,11 @@ Das Skript ist nun vollständig dokumentiert und ermöglicht es Benutzern, AWS C
 
 Weil das ein Bashskript ist muss es Unix endlines haben das wäre LF und Windows hat CRLF das heisst wenn man die File auf windows von Github herunterholt wird es ein Fehler geben.
 Benutzen sie bitte die File die wir Ihnen in der .zip Datei mitgeschickt haben damit sie diese probleme nicht haben sonst könnte man mit dem Tool dos2unix die file kurz konvertieren.
+
+## Reflexion
+### Adrian
+Aus meiner Perspektive verlief das Projekt sehr erfolgreich. Die Aufgabenverteilung innerhalb unseres Teams war effektiv, da wir die individuellen Stärken jedes Mitglieds optimal nutzen konnten. Meine Aufgabe konzentrierte sich auf die Lambda-Funktion und deren Trigger, während Alessandro für das Bash-Skript und die Erstellung der Buckets zuständig war. Ruben wiederum entwickelte das Python-Skript zur Datenverkleinerung.
+
+Zu Beginn arbeiteten wir unabhängig an verschiedenen Teilen des Projekts. Nachdem jeder seinen Abschnitt fertiggestellt hatte, führten wir die einzelnen Komponenten zusammen. Während der Integration überprüften und diskutierten wir den gesamten Code gemeinsam, was zu wertvollen Ergänzungen und Verbesserungen führte.
+
+Zeitlich gesehen war unser Zeitplan recht straff, doch es gelang uns, alles rechtzeitig fertigzustellen. Darüber hinaus blieb uns genügend Zeit, um das Gesamtsystem gründlich zu testen und sicherzustellen, dass alles reibungslos funktioniert.
