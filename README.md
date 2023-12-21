@@ -1,5 +1,9 @@
 # Dokumentation Bildverkleinerung
 
+## Ausführung
+
+Navigieren Sie mit dem Befehl "cd" in das Verzeichnis, in dem sich alle Projektdateien befinden. Führen Sie dann den folgenden Befehl aus: "./script.sh".
+
 ## 1. Einleitung
 
 Dies ist eine Dokumentation für das Bash-Skript "Bildverkleinerung", das erstellt wurde, um die AWS Cloud-Bildverkleinerungsfunktionen zu nutzen. Dieses Skript erstellt einen AWS S3-Bucket, erstellt eine AWS Lambda-Funktion, fügt einen Trigger hinzu, um die Lambda-Funktion bei der Erstellung von Objekten im Bucket auszulösen, und lädt ein Bild in den Source Bucket hoch, wobei die Verkleinerungsrate und das Ziel-Bucket als Metadaten hinzugefügt werden.
