@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Name: Bildverkleinerung
 # Datum: 17.12.2023
 # Autoren: Ruben Gonzalez Cruz, Adrian Orlamünde, Alessandro Melcher
