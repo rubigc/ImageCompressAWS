@@ -80,6 +80,7 @@ aws lambda add-permission \
 echo "Trigger erstellt"
 
 # ------------------------------- Bild in den Source Bucket hochladen -------------------------------
+
 echo "Bild wird in $BUCKET_NAME_SRC hochgeladen"
 # Bild in den Source Bucket hochladen
 aws s3 cp $IMAGE_PATH s3://$BUCKET_NAME_SRC/ --region $REGION --metadata metadata="$REDUCTION_RATE;$BUCKET_NAME_DST"
